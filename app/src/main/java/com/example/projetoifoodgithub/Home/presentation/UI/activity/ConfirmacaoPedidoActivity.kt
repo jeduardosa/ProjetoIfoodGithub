@@ -1,4 +1,4 @@
-package com.example.projetoifoodgithub.Login
+package com.example.projetoifoodgithub.Home.presentation.UI.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -13,21 +13,9 @@ class ConfirmacaoPedidoActivity : AppCompatActivity() {
         binding = ActivityConfirmacaoPedidoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btnVoltar.setOnClickListener {
-            finish()
-        }
-
-        binding.txtResumo.text = """Resumo dos valores
-            Subtotal: R$ 100,00
-            Taxa de entrega: R$ 6,90
-            Total: R$ 106,90""".trimIndent()
-
-        binding.btnAdicionarPagamento.setOnClickListener {
-
-        }
-
-        binding.btnConfirmar.setOnClickListener {
-
+         binding.btnVoltar.setOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
         }
     }
 }
+

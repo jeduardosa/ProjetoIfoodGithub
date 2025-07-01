@@ -9,17 +9,6 @@
 
     <style name="Theme.ProjetoIfoodGithub" parent="Base.Theme.ProjetoIfoodGithub" />
 
-  
-  
-  
-
-
-
-
-
-
-
-
     <style name="IconOnlyButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="iconPadding">0dp</item>
         <item name="iconGravity">textStart</item>
