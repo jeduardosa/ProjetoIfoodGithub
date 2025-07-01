@@ -72,8 +72,8 @@ class ProductsRequest : AppCompatActivity() {
                 updateTotal()
             }
         }
-
     }
+
     private fun updateTotal(){
         counterAuxiliar = (counterQueijo*5) + (counterPicles*10)
         val contaTotal = counterAuxiliar + (counterTotal * valorCombo)
