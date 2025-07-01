@@ -1,10 +1,7 @@
-package com.example.projetoifoodgithub
+package com.example.projetoifoodgithub.Home.presentation.UI.activity
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.projetoifoodgithub.databinding.ActivityDetalhesRestauranteBinding
 
 class DetalhesRestauranteActivity : AppCompatActivity() {

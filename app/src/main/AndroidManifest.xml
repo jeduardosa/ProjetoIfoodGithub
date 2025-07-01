@@ -28,13 +28,13 @@
             android:launchMode="singleTop"
             android:exported="false" />
         <activity
-            android:name=".ProductsRequest"
+            android:name=".Home.presentation.UI.activity.ProductsRequest"
             android:exported="false"/>
         <activity
-            android:name=".DetalhesRestauranteActivity"
+            android:name=".Home.presentation.UI.activity.DetalhesRestauranteActivity"
             android:exported="false"/>
         <activity
-            android:name=".Login.ConfirmacaoPedidoActivity"
+            android:name=".Home.presentation.UI.activity.ConfirmacaoPedidoActivity"
             android:exported="false"/>
     </application>
 

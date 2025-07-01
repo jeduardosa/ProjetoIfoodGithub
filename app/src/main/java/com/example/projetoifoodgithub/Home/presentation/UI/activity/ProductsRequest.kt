@@ -1,10 +1,8 @@
-package com.example.projetoifoodgithub
-
+package com.example.projetoifoodgithub.Home.presentation.UI.activity
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.projetoifoodgithub.Login.ConfirmacaoPedidoActivity
 import com.example.projetoifoodgithub.databinding.ActivityProductsRequestBinding
 
 class ProductsRequest : AppCompatActivity() {
