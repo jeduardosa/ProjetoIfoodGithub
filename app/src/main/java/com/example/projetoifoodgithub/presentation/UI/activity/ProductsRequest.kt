@@ -1,4 +1,4 @@
-package com.example.projetoifoodgithub
+package com.example.projetoifoodgithub.Home.presentation.UI.activity
 
 
 import android.content.Intent
