@@ -1,5 +1,6 @@
 package com.example.projetoifoodgithub
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -8,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.projetoifoodgithub.Home.presentation.UI.adapter.Produto
 import com.example.projetoifoodgithub.Home.presentation.UI.adapter.Produto2
+import com.example.projetoifoodgithub.databinding.ActivityDetalheBinding
 import com.example.projetoifoodgithub.databinding.ActivityDetalhesRestauranteBinding
 
 
@@ -62,3 +64,5 @@ class DetalhesRestauranteActivity : AppCompatActivity() {
         }, 4000)
     }
 }
+
+
