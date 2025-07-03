@@ -63,9 +63,9 @@ class HomeActivity : AppCompatActivity() {
             "https://static.ifood-static.com.br/image/upload/t_medium/logosgde/9ba12409-83c1-4f10-bff8-c6d2f0ff2a36/202408251256_10ZR.png?imwidth=128"
         ),
         Loja(
-            "Sushinovo",
-            "Japonesa",
-            "https://static.ifood-static.com.br/image/upload/t_medium/logosgde/056edd54-d369-45dd-8d46-8d953610b756/202408082004_IKaJ_i.jpg?imwidth=128"
+            "OutBack Steakhouse",
+            "Lanches",
+            "https://static.ifood-static.com.br/image/upload/t_thumbnail/logosgde/49c13948-f7fc-461a-b00a-9453989f9d66/202209261023_d3XS_i.jpg?imwidth=128"
         ),
         Loja(
             "Pizza Big Mike",
