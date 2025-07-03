@@ -14,11 +14,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetoIfoodGithub"
         tools:targetApi="31">
-
         <activity
-            android:name=".Home.presentation.UI.activity.HomeActivity"
-            android:name=".Login.LoginActivity"
+            android:name=".DetalhesActivity"
             android:exported="false" />
+        <activity
+            android:name=".detalhe"
+            android:exported="false" />
+        <!--
+                <activity
+                    android:name=".Home.presentation.UI.activity.HomeActivity"
+                    android:name=".Login.LoginActivity"
+                    android:exported="false" />
+        -->
         <activity
             android:name=".DetalhesRestauranteActivity"
             android:exported="true">
@@ -28,10 +35,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-              <activity
+        <activity
             android:name=".Home.presentation.UI.activity.HomeActivity"
             android:exported="false" />
-              <activity
+        <activity
             android:name=".ProductsRequest"
             android:exported="false" />
     </application>

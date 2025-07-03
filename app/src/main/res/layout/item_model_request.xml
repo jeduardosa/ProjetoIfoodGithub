@@ -45,7 +45,7 @@
         </LinearLayout>
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/imgDetalhe"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginTop="8dp"
@@ -68,8 +68,9 @@
             <Button
                 android:id="@+id/btn_item_menos"
                 style="@style/IconOnlyButton"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:contentDescription="@string/app_name"
                 android:padding="5dp"
                 app:icon="@drawable/ic_remove_24"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -79,6 +80,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
                 android:inputType="number"
                 android:text="0"
                 android:textSize="16sp"
@@ -91,6 +93,7 @@
                 android:layout_height="40dp"
                 android:padding="5dp"
                 app:icon="@drawable/ic_add_24"
+                android:contentDescription="@string/app_name"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView2"
                 app:layout_constraintTop_toTopOf="@+id/imageView2" />
