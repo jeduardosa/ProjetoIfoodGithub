@@ -1,5 +1,6 @@
 package com.example.projetoifoodgithub.Home.presentation.UI.activity
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.projetoifoodgithub.databinding.ActivityDetalhesBinding
@@ -12,6 +13,10 @@ class DetalhesActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDetalhesBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.btnBack.setOnClickListener {
+            startActivity(Intent(this, DetalhesRestauranteActivity::class.java))
+        }
         val imagem = intent.getIntExtra("imagem", 0)
         val nome = intent.getStringExtra("nome")
         val preco = intent.getStringExtra("preco")

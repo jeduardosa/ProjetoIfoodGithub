@@ -1,20 +1,17 @@
 package com.example.projetoifoodgithub.Home.presentation.UI.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.projetoifoodgithub.R
+import com.example.projetoifoodgithub.Home.data.model.Produto
 import com.example.projetoifoodgithub.databinding.ProdutoBinding
 
-data class Produto(
+/*data class Produto(
     val imagemResId: Int,
     val nome: String,
     val preco: String,
     val avaliacao: String
-)
+)*/
 
 class Produto2(
     private val produtoList: List<Produto>,
