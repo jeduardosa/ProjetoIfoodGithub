@@ -6,6 +6,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Home.presentation.UI.activity.DetalhesActivity">
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="23dp"
+        android:background="@drawable/button_radius"
+        android:backgroundTint="@color/white"
+        android:contentDescription="@string/app_name"
+        android:elevation="10dp"
+        android:paddingStart="10dp"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <LinearLayout

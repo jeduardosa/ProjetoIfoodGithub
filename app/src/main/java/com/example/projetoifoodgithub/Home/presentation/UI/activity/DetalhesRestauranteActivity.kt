@@ -1,12 +1,13 @@
 package com.example.projetoifoodgithub.Home.presentation.UI.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.projetoifoodgithub.Home.presentation.UI.adapter.Produto
+import com.example.projetoifoodgithub.Home.data.model.Produto
 import com.example.projetoifoodgithub.Home.presentation.UI.adapter.Produto2
 import com.example.projetoifoodgithub.R
 import com.example.projetoifoodgithub.databinding.ActivityDetalhesRestauranteBinding
@@ -31,16 +32,23 @@ class DetalhesRestauranteActivity : AppCompatActivity() {
             Produto(R.drawable.destaque_thuner, "Thunder Browniev", "R$ 21,99", "4.3"),
             Produto(R.drawable.baunilha_gran, "Sorvete Baunilha", "R$ 21,99", "4.3")
         )
+        binding.btnBack.setOnClickListener {
+            startActivity(Intent(this, HomeActivity::class.java))
+        }
+        binding.imgBigFive.setOnClickListener {
+            startActivity(Intent(this, ProductsRequest::class.java))
+        }
 
         produtoAdapter = Produto2(produtoList) { produto ->
             Toast.makeText(this, "Clicou em: ${produto.nome}", Toast.LENGTH_SHORT).show()
-            /* val intent = Intent(this, DetalhesActivity::class.java).apply {
+
+            val intent = Intent(this, DetalhesActivity::class.java).apply {
                  putExtra("imagem", produto.imagemResId)
                  putExtra("nome", produto.nome)
                  putExtra("preco", produto.preco)
                  putExtra("avaliacao", produto.avaliacao)
              }
-             startActivity(intent)*/
+             startActivity(intent)
         }
 
         binding.viewProduto.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
