@@ -5,24 +5,21 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
     tools:context=".Home.presentation.UI.activity.DetalhesRestauranteActivity">
 
     <ImageButton
         android:id="@+id/btnBack"
         android:layout_width="32dp"
         android:layout_height="32dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="5dp"
+        android:src="@drawable/ic_arrow_back"
         android:background="@drawable/button_radius"
         android:backgroundTint="@color/white"
-        android:contentDescription="@string/app_name"
         android:elevation="10dp"
         android:paddingStart="10dp"
-        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="8dp"/>
 
     <ImageView
         android:id="@+id/imageView2"
@@ -32,13 +29,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ned_kelly" />
+        app:srcCompat="@drawable/banner_product" />
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageView3"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imageView2"
         app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerCircle"
@@ -49,7 +47,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Outback steakhouse"
+        android:layout_marginStart="16dp"
+        android:text="Outback Steakhouse"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,7 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="Restaurante"
-        android:textSize="16sp"
+        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="@id/textView2"
         app:layout_constraintTop_toBottomOf="@id/textView2" />
 
@@ -69,91 +68,234 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         android:text="Destaques"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/textView3"
         app:layout_constraintTop_toBottomOf="@id/textView3" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/viewProduto"
-        android:layout_width="0dp"
-        android:layout_height="215dp"
-        android:layout_marginTop="16dp"
-        android:contentDescription="@string/app_name"
+    <HorizontalScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Item 1 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="@drawable/img_radius"
+                    android:clipToOutline="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/frango_especial" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="R$ 59,90"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="R$ 79,90"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Frango especial"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <!-- Item 2 -->
+            <LinearLayout
+                android:id="@+id/comboOutback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="@drawable/img_radius"
+                    android:clipToOutline="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ned_kelly" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="R$ 20,00"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="R$ 30,00"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AULA Combo Hamburguer +\n Batata + MilkShake"
+                    android:textSize="9sp" />
+
+            </LinearLayout>
+
+            <!-- Item 3 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="@drawable/img_radius"
+                    android:clipToOutline="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/destaque_thuner" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="R$ 24,90"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="R$ 29,90"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thunder Brownie"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.67" />
+        app:layout_constraintGuide_percent="0.58" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:text="Produtos"
-        android:textSize="20sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/guideline" />
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/imgBigFive"
-        android:layout_width="115dp"
-        android:layout_height="115dp"
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="95dp"
+        android:layout_height="90dp"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/guideline"
-        app:shapeAppearanceOverlay="@style/CantosArredondados"
+        android:clipToOutline="true"
+        android:background="@drawable/img_radius"
         app:srcCompat="@drawable/big_five" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="6dp"
         android:text="Big Five"
-        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/textView"
         app:layout_constraintTop_toBottomOf="@id/textView" />
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Os cinco Aperitivos mais pedidos da casa\nem único prato"
-        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="@id/textView5"
-        app:layout_constraintEnd_toEndOf="@id/imgBigFive"
         app:layout_constraintTop_toBottomOf="@id/textView5" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="R$ 89,90"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/textView7"
         app:layout_constraintTop_toBottomOf="@id/textView7" />
 
-    <com.google.android.material.imageview.ShapeableImageView
+    <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="115dp"
-        android:layout_height="115dp"
+        android:layout_width="95dp"
+        android:layout_height="90dp"
         android:layout_marginTop="16dp"
+        android:background="@drawable/img_radius"
+        android:clipToOutline="true"
         android:scaleType="centerCrop"
-        app:layout_constraintStart_toStartOf="@id/imgBigFive"
-        app:layout_constraintTop_toBottomOf="@id/imgBigFive"
-        app:shapeAppearanceOverlay="@style/CantosArredondados"
+        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="@id/imageView5"
+        app:layout_constraintTop_toBottomOf="@id/imageView5"
         app:srcCompat="@drawable/hambuger_casa" />
 
     <TextView
@@ -162,7 +304,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Hamburger da casa"
-        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/textView8"
         app:layout_constraintTop_toBottomOf="@id/textView8" />
