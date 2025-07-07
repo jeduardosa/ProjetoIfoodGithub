@@ -1,10 +1,12 @@
 package com.example.projetoifoodgithub.Home.presentation.UI.adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.projetoifoodgithub.Home.data.model.Loja
+import com.example.projetoifoodgithub.Home.presentation.UI.activity.DetalhesRestauranteActivity
 import com.example.projetoifoodgithub.databinding.ItemRvLojasBinding
 import com.example.projetoifoodgithub.databinding.ItemRvUltimasLojasBinding
 import com.squareup.picasso.Picasso
@@ -19,7 +21,6 @@ class LojasAdapter(
         notifyDataSetChanged()
     }
 
-
     inner class LojasViewHolder(
         private val binding: ItemRvLojasBinding
     ) : ViewHolder(binding.root) {
@@ -33,6 +34,8 @@ class LojasAdapter(
                         .into(imageLoja)
                 }
                 clLoja.setOnClickListener {
+                    val intent = Intent(itemView.context, DetalhesRestauranteActivity::class.java)
+                    itemView.context.startActivity(intent)
                 }
             }
         }
@@ -50,6 +53,8 @@ class LojasAdapter(
                         .into(imageUltimaLoja)
                 }
                 clUltimaLoja.setOnClickListener {
+                    val intent = Intent(itemView.context, DetalhesRestauranteActivity::class.java)
+                    itemView.context.startActivity(intent)
                 }
             }
         }
