@@ -30,8 +30,6 @@
         <activity
             android:name=".Home.presentation.UI.activity.ProductsRequest"
             android:exported="false"/>
-        <activity android:name=".Home.presentation.UI.activity.DetalhesActivity"
-            android:exported="false"/>
         <activity
             android:name=".Home.presentation.UI.activity.DetalhesRestauranteActivity"
             android:exported="false"/>

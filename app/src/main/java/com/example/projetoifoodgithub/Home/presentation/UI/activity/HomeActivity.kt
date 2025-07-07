@@ -148,7 +148,7 @@ class HomeActivity : AppCompatActivity() {
 
     private fun inicializarFiltroCategorias() {
         with(binding) {
-           val filtroCategoria = FiltroCategoriaAdapter()
+            val filtroCategoria = FiltroCategoriaAdapter()
             rvFiltroCategoria.adapter = filtroCategoria
             rvFiltroCategoria.layoutManager = GridLayoutManager(
                 this@HomeActivity,

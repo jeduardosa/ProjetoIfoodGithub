@@ -23,8 +23,8 @@ class DetalhesRestauranteActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        }
     }
+}
 
 
 

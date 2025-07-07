@@ -59,35 +59,35 @@ class LojasAdapter(
             }
         }
     }
-        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
-            val layoutInflater = LayoutInflater.from(parent.context)
-            if (orientacao == RecyclerView.VERTICAL) {
-                val itemLojasBinding = ItemRvLojasBinding.inflate(
-                    layoutInflater,
-                    parent,
-                    false
-                )
-                return LojasViewHolder(itemLojasBinding)
-            }
-            val itemUltimasLojasBinding = ItemRvUltimasLojasBinding.inflate(
+        val layoutInflater = LayoutInflater.from(parent.context)
+        if (orientacao == RecyclerView.VERTICAL) {
+            val itemLojasBinding = ItemRvLojasBinding.inflate(
                 layoutInflater,
                 parent,
                 false
             )
-            return UltimasLojasViewHolder(itemUltimasLojasBinding)
+            return LojasViewHolder(itemLojasBinding)
         }
+        val itemUltimasLojasBinding = ItemRvUltimasLojasBinding.inflate(
+            layoutInflater,
+            parent,
+            false
+        )
+        return UltimasLojasViewHolder(itemUltimasLojasBinding)
+    }
 
-        override fun getItemCount(): Int {
-            return listaLojas.size
-        }
+    override fun getItemCount(): Int {
+        return listaLojas.size
+    }
 
-        override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-            val loja = listaLojas[position]
-            when (holder) {
-                is LojasViewHolder -> holder.bind(loja)
-                is UltimasLojasViewHolder -> holder.bind(loja)
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val loja = listaLojas[position]
+        when (holder) {
+            is LojasViewHolder -> holder.bind(loja)
+            is UltimasLojasViewHolder -> holder.bind(loja)
 
-            }
         }
     }
+}
