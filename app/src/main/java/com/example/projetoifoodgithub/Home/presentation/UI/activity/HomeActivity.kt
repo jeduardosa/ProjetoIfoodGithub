@@ -1,7 +1,5 @@
 package com.example.projetoifoodgithub.Home.presentation.UI.activity
 
-import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
