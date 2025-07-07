@@ -73,7 +73,6 @@
         app:layout_constraintStart_toStartOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-
     <ImageView
         android:id="@+id/imgItem"
         android:layout_width="85dp"
