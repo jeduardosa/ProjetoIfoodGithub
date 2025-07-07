@@ -20,7 +20,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <TextView
         android:id="@+id/txtTitulo"
         android:layout_width="wrap_content"
@@ -76,7 +75,7 @@
     <ImageView
         android:id="@+id/imgItem"
         android:layout_width="85dp"
-        android:layout_height="75dp"
+        android:layout_height="80dp"
         android:scaleType="centerCrop"
         android:src="@drawable/food"
         android:clipToOutline="true"
