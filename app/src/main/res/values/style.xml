@@ -15,7 +15,7 @@
     </style>
 
     <style name="Widget.MaterialComponents.Chip.ChipFiltro" parent="@style/Widget.MaterialComponents.Chip.Choice">
-        <item name="chipBackgroundColor">@color/alternar_fundo_filtro</item>
+        <item name="chipBackgroundColor">@drawable/alternar_fundo_filtro</item>
         <item name="chipCornerRadius">20dp</item>
         <item name="chipStrokeWidth">1dp</item>
         <item name="chipStrokeColor">@color/cinza</item>

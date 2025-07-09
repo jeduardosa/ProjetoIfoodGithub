@@ -3,7 +3,7 @@
 
     <item android:color="@color/secundaria_clara"
         android:state_checked="true"/>
-    
+
     <item android:color="@color/branco"
         android:state_checked="false"/>
 </selector>

@@ -1,9 +1,11 @@
-package com.example.projetoifoodgithub
+package com.example.projetoifoodgithub.Home.presentation.UI.activity
 
-
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.projetoifoodgithub.databinding.ActivityProductsRequestBinding
+import java.text.NumberFormat
+import java.util.Locale
 
 class ProductsRequest : AppCompatActivity() {
     private lateinit var binding: ActivityProductsRequestBinding
@@ -13,18 +15,20 @@ class ProductsRequest : AppCompatActivity() {
     private var counterAuxiliar = 0
     private val valorCombo = 20
 
-        override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityProductsRequestBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        //validaCompra()
 
-        //PICLES
+        binding.btnBack.setOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
+
         binding.btnPiclesMais.setOnClickListener {
-                counterPicles++
-                binding.txtQuantityPicles.text = counterPicles.toString()
-                updateTotal()
-            }
+            counterPicles++
+            binding.txtQuantityPicles.text = counterPicles.toString()
+            updateTotal()
+        }
 
         binding.btnPiclesMenos.setOnClickListener {
             if (counterPicles > 0) {
@@ -33,11 +37,12 @@ class ProductsRequest : AppCompatActivity() {
                 updateTotal()
             }
         }
+
         //QUEIJO
         binding.btnQueijoMais.setOnClickListener {
-                counterQueijo++
-                binding.txtQuantityQueijo.text =  counterQueijo.toString()
-                updateTotal()
+            counterQueijo++
+            binding.txtQuantityQueijo.text = counterQueijo.toString()
+            updateTotal()
         }
 
         binding.btnQueijoMenos.setOnClickListener {
@@ -48,12 +53,6 @@ class ProductsRequest : AppCompatActivity() {
             }
         }
 
-        binding.btnConfirmar.setOnClickListener {
-            /*val intent = Intent(this, DashMenuActivity::class.java)
-            startActivity(intent)
-            finish()*/
-        }
-
         //QUANTIDADE TOTAL
         binding.btnQuantityTotalMais.setOnClickListener {
             counterTotal++
@@ -62,24 +61,26 @@ class ProductsRequest : AppCompatActivity() {
         }
 
         binding.btnQuantityTotalMenos.setOnClickListener {
-            if (counterTotal > 1){
+            if (counterTotal > 1) {
                 counterTotal--
                 binding.txtQuantityTotal.text = counterTotal.toString()
                 updateTotal()
             }
         }
 
+        binding.btnConfirmar.setOnClickListener {
+            val valorTotal = binding.txtPrecoTotalInChangeProducts.text.toString()
+            val intent = Intent(this, ConfirmacaoPedidoActivity::class.java)
+            intent.putExtra("CARRINHO", valorTotal)
+            startActivity(intent)
+        }
     }
-    private fun updateTotal(){
-        counterAuxiliar = (counterQueijo*5) + (counterPicles*10)
+
+    private fun updateTotal() {
+        counterAuxiliar = (counterQueijo * 5) + (counterPicles * 10)
         val contaTotal = counterAuxiliar + (counterTotal * valorCombo)
-        binding.txtPrecoTotalInChangeProducts.text = String.format("RS%20d", contaTotal)
+
+        val formatoMoeda = NumberFormat.getCurrencyInstance(Locale("pt", "BR"))
+        binding.txtPrecoTotalInChangeProducts.text = formatoMoeda.format(contaTotal.toDouble())
     }
-
-
-    /*private fun validaCompra(){
-        val intent = Intent(this, ConfirmacaoPedidoActivity::class.java)
-        startActivity(intent)
-    }*/
-
 }
