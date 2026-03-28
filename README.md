@@ -30,6 +30,4 @@ Criar um aplicativo com 4 telas principais, simulando o fluxo de um pedido em um
 ---
 
 ## ▶️ Como executar
-1. Clone este repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/ProjetoIfoodGithub.git
+   Você precisará clonar o projeto, abrir no Android Studio, executar no emulador ou gerar um AAB ou APK e instalar no celular.
