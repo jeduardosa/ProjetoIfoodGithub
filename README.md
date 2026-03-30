@@ -12,13 +12,13 @@ Criar um aplicativo com 4 telas principais, simulando o fluxo de um pedido em um
 
 ## 🖼️ Telas do App
 
-| ifoodApp1 - Tela de Login | ifoodApp2 - Tela Inicial |
-|---------------------------|--------------------------|
-| ![ifoodApp1](https://github.com/jeduardosa/ProjetoIfoodGithub/blob/main/app/src/main/res/drawable/ifoodApp1.jpeg) | ![ifoodApp2](https://github.com/jeduardosa/ProjetoIfoodGithub/blob/main/app/src/main/res/drawable/ifoodApp2.jpeg) |
+| Tela de Login | Tela Inicial | Detalhes Restaurante |
+|---------------------------|--------------------------|-------------------------|
+| ![ifoodApp1](https://github.com/jeduardosa/ProjetoIfoodGithub/blob/main/app/src/main/res/drawable/ifoodApp5.jpeg) | ![ifoodApp2](https://github.com/jeduardosa/ProjetoIfoodGithub/blob/main/app/src/main/res/drawable/ifoodApp1.jpeg) | ![ifoodApp3](https://github.com/jeduardosa/ProjetoIfoodGithub/blob/main/app/src/main/res/drawable/ifoodApp2.jpeg) |
 
-| ifoodApp3 - Detalhes Restaurante | ifoodApp4 - Detalhes Produto |
+| Detalhes Produto | Confirmação de pedido |
 |---------------------------------|------------------------------|
-| ![ifoodApp3](https://github.com/jeduardosa/ProjetoIfoodGithub/blob/main/app/src/main/res/drawable/ifoodApp3.jpeg) | ![ifoodApp4](https://github.com/jeduardosa/ProjetoIfoodGithub/blob/main/app/src/main/res/drawable/ifoodApp4.jpeg) |
+| ![ifoodApp4](https://github.com/jeduardosa/ProjetoIfoodGithub/blob/main/app/src/main/res/drawable/ifoodApp3.jpeg) | ![ifoodApp5](https://github.com/jeduardosa/ProjetoIfoodGithub/blob/main/app/src/main/res/drawable/ifoodApp4.jpeg) |
 
 ---
 
